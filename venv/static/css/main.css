@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'D2Coding';
+    src: url('../font/D2Coding.ttc');
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-family: 'Roboto', 'D2Coding', sans-serif;
+}
+
+header {
+    height: 60px;
+    background-color: rgb(111, 119, 103);
+    color: black;
+}
+
+header>.wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 12px 20px;
+}
+
+header>.wrap>.logo {
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+header>.wrap>img {
+    width: 30px;
+    padding-top: 5px;
+}
+
+header>.wrap>ul {
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+}
+
+header>.wrap>ul>li {
+    float: left;
+    list-style: none;
+    margin-left: 10px;
+}
+
+header>.wrap>ul>li>a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header>.wrap>ul>li>a.active {
+    color: #000000;
+    border-bottom: 3px solid #343a40;
+}
+
+footer {
+    max-width: 720px;
+    margin: 0 auto;
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+}
+footer>p {
+    margin: 0;
+}
+
+main {
+    /* header height 60px + footer height 60px = 120px */
+    height: calc(100% - 120px);
+    max-width: 720px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+}
+
+main.contents>.wrap {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+main.contents p {
+    font-size: 20px;
+}
+#map-container {
+    order:2;
+    text-align: center; /* 부모 요소를 가운데 정렬 */
+}
+
+#map {
+    height: 400px;
+    width: 720px;
+    margin: 0 auto; /* 가운데 정렬을 위해 margin을 auto로 설정 */
+}
+main.contents button {
+    padding: 20px 30px;
+    background-color: rgb(8, 97, 0);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main.contents button.over-red:hover {
+    background-color: rgb(0, 110, 255);
+    color: white;
+}

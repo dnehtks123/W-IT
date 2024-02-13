@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<head>
+    <meta charset="utf-8">
+    <!-- 웹브라우져 호환성 설정 IE=edge IE8 버전 이상 표준모드로 렌더링  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- viewport : 렌더링 영역의 크기를 설정 : 반응형 웹에서 사용 -->
+    <!-- width=device-width : 페이지 너비를 스크린 너비로 설정 -->
+    <!-- initial-scale=1.0 : 1배로 설정 0 ~ 10 사이의 수를 가짐 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="/static/wit-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../static/css/main.css"> -->
+    <link rel="stylesheet" href="../static/css/database.css">
+    <!-- 브라우져 tab에 출력되는 문자열 -->
+    <title>Live</title>
+    <!-- 브라우져 tab에 출력되는 이미지 -->
+    <title>W-IT실시간 모니터링 및 예측 시스템</title>
+
+</head>
+<body>
+    <header class="header">
+        <nav class="wrap">
+            <label class="logo"><b>WIT</b></label>
+            <!-- <img src="https://www.kt.com/favicon.ico" alt="kt-logo"> -->
+            <ul>
+                {% if user %}
+                    <li><a >Hello {{user.name}}</a></li>
+                {% endif %}
+                <li><a href="index_database.html">Home</a></li><!-- modify -->
+                <li><a href="" class="active">Monitoring</a></li>
+                <li><a href="prediction.html">Prediction</a></li>
+                <li><a href="index.html">Logout</a></li><!-- modify -->
+            </ul>
+        </nav>
+    </header><!-- header -->
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="temperatureChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="humidityChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="turbidityChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="phChart"></canvas>
+        </div>
+    </div>
+    <script src="../static/js/app.js"></script>
+</body>
+</html>
+<!-- Chart.js 및 chartjs-plugin-zoom CDN 포함 -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>

@@ -1,0 +1,154 @@
+
+
+h1 {
+    text-align: center;
+    color: rgb(4, 19, 38);
+}
+@font-face {
+    font-family: 'D2Coding';
+    src: url('../font/D2Coding.ttc');
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-family: 'Roboto', 'D2Coding', sans-serif;
+}
+
+header {
+    height: 60px;
+    background-color: rgb(111, 119, 103);
+    color: black;
+}
+
+header>.wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 12px 20px;
+}
+
+header>.wrap>.logo {
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+header>.wrap>img {
+    width: 30px;
+    padding-top: 5px;
+}
+
+header>.wrap>ul {
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+}
+
+header>.wrap>ul>li {
+    float: left;
+    list-style: none;
+    margin-left: 10px;
+}
+
+header>.wrap>ul>li>a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header>.wrap>ul>li>a.active {
+    color: #000000;
+    border-bottom: 3px solid #343a40;
+}
+
+footer {
+    max-width: 720px;
+    margin: 0 auto;
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+}
+footer>p {
+    margin: 0;
+}
+
+main {
+    /* header height 60px + footer height 60px = 120px */
+    height: calc(100% - 120px);
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+}
+
+main.contents>.wrap {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+main.contents p {
+    font-size: 20px;
+}
+form {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+}
+.graph-image1 img {
+    max-width: 80%;
+    width: auto;
+    height: auto; /* 가로 세로 비율을 유지하면서 크기 조절 */
+}
+.graph-image img {
+    max-width: 80%;
+    width: auto;
+    height: auto; /* 가로 세로 비율을 유지하면서 크기 조절 */
+}
+
+.image-container>.graph-image {
+    width: 100%;
+    display: flex;
+    margin-bottom: 100px; /* 이미지 간격 조절 */
+    justify-content: center;
+
+}
+
+.upload {
+    margin-top: 70px; /* 업로드 폼과 이미지 간 간격 조절 */
+}
+input[type="file"] {
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+main>section>.contents-wrap>.search {
+    border: 1px solid #28a745;
+    background: none;
+    color: #28a745;
+    cursor: pointer;
+}
+
+main>section>.contents-wrap>.search:hover {
+    background-color: #28a745;
+    color: white;
+}
+

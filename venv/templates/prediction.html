@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <!-- 웹브라우져 호환성 설정 IE=edge IE8 버전 이상 표준모드로 렌더링  -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="path/to/map-script.js"></script>
+        <!-- viewport : 렌더링 영역의 크기를 설정 : 반응형 웹에서 사용 -->
+        <!-- width=device-width : 페이지 너비를 스크린 너비로 설정 -->
+        <!-- initial-scale=1.0 : 1배로 설정 0 ~ 10 사이의 수를 가짐 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- 브라우져 tab에 출력되는 문자열 -->
+        <title>W-IT실시간 모니터링 및 예측 시스템</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/css/prediction.css">
+        <!-- 브라우져 tab에 출력되는 이미지 -->
+        <link rel="icon" href="/static/wit-logo.png">
+        <!-- 기타 로고와 관련된 내용 추가 -->
+        <!-- web font link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="wrap">
+                <label class="logo"><b>WIT</b></label>
+                <!-- <img src="https://www.kt.com/favicon.ico" alt="kt-logo"> -->
+                <ul>
+                    {% if user %}
+                        <li><a >Hello {{user.name}}</a></li>
+                    {% endif %}
+                    <li><a href="">Home</a></li><!-- modify -->
+                    <li><a href="index_database.html" >Monitoring</a></li>
+                    <li><a href="prediction.html" class="active">Prediction</a></li>
+                    <li><a href="index.html">Logout</a></li><!-- modify -->
+                </ul>
+            </nav>
+        <div></div>
+
+        </header><!-- header -->
+        
+        <main class="contents">
+            <div class="image-container">
+                <div class="graph-image">
+                    <img src="../static/prediction.png" alt="Graph 1">
+                </div>
+                <div class="graph-image1">
+                    <img src="../static/prediction2.png" alt="Graph 2">
+                </div>
+            </div>
+            <div class="upload">
+                <h1>Upload CSV File</h1>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" accept=".csv">
+                    <input type="submit" value="Upload">
+                </form>
+            </div>
+        </main><!-- main -->
+        
+        <footer class="footer">
+            <p>All rights reserved. ©WIT</p>
+        </footer><!-- footer -->
+    </body>
+    </html>

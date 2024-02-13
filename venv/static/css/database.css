@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'D2Coding';
+    src: url('../font/D2Coding.ttc');
+}
+
+header {
+    height: 60px;
+    background-color: rgb(111, 119, 103);
+    color: black;
+}
+
+html, body {
+    height: 70%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', 'D2Coding', sans-serif;
+}
+
+
+header>.wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 12px 20px;
+}
+
+header>.wrap>.logo {
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+header>.wrap>ul {
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+}
+
+header>.wrap>ul>li {
+    float: left;
+    list-style: none;
+    margin-left: 10px;
+}
+
+header>.wrap>ul>li>a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header>.wrap>ul>li>a.active {
+    color: #000000;
+    border-bottom: 3px solid #000000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 20px;
+    height: 100%;
+    padding: 15px;
+    
+}
+
+.chart-container {
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    margin-right: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.navbar-link:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 1px;
+    background-color: #fff;
+}

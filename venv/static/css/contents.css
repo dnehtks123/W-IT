@@ -1,0 +1,58 @@
+main {
+    width: 100%-60px;
+}
+
+main>section>.contents-wrap {
+    padding: 40px 0;
+}
+
+main>section>.contents-wrap>.input-address,
+main>section>.contents-wrap>.search {
+    border-radius:5px;
+    font-size: 30px;
+    padding: 10px;
+}
+
+main>section>.contents-wrap>.search {
+    border: 1px solid #28a745;
+    background: none;
+    color: #28a745;
+    cursor: pointer;
+}
+
+main>section>.contents-wrap>.search:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+main>section>.table-wrap{
+    display: none;
+    padding-top: 0;
+}
+main>section>.contents-wrap>table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+main>section>.map-container {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table tr{
+    border-bottom: 1px solid gray;
+}
+
+#map-container {
+    text-align: center; /* 부모 요소를 가운데 정렬 */
+}
+
+#map {
+    display: inline-block; /* 가운데 정렬을 위해 인라인 블록 요소로 설정 */
+    max-width: 100%; /* 최대 너비를 부모 요소의 크기에 맞게 조절 */
+    max-height: 100%; /* 최대 높이를 부모 요소의 크기에 맞게 조절 */
+}
+
+table th, table td {
+    padding: 10px;
+}

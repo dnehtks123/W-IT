@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 웹브라우져 호환성 설정 IE=edge IE8 버전 이상 표준모드로 렌더링  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="path/to/map-script.js"></script>
+    <!-- viewport : 렌더링 영역의 크기를 설정 : 반응형 웹에서 사용 -->
+    <!-- width=device-width : 페이지 너비를 스크린 너비로 설정 -->
+    <!-- initial-scale=1.0 : 1배로 설정 0 ~ 10 사이의 수를 가짐 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 브라우져 tab에 출력되는 문자열 -->
+    <title>W-IT실시간 모니터링 및 예측 시스템</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/contents.css">
+    <!-- 브라우져 tab에 출력되는 이미지 -->
+    <link rel="icon" href="/static/wit-logo.png">
+    <!-- 기타 로고와 관련된 내용 추가 -->
+    <!-- web font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="wrap">
+            <label class="logo"><b>WIT</b></label>
+            <!-- <img src="https://www.kt.com/favicon.ico" alt="kt-logo"> -->
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    <div></div>
+
+    </header><!-- header -->
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqamiGwWRL_gOnbZq6osCGKi0LS2P_-8s&callback=initMap" async defer></script>
+    <main class="contents">
+        
+        <section class="wrap">
+            <div class="contents-wrap">
+                <input type="text" class="input-address">
+                <button class="search">Search</button>
+            </div>
+            <div class="contents-wrap table-wrap">
+                <table>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div></div>
+            <div id ='map-container'>
+                <div id="map" style="height: 400px; width: 720px;"></div>
+            </div>
+        </section>
+    </main><!-- main -->
+    
+    <footer class="footer">
+        <p>All rights reserved. ©WIT</p>
+    </footer><!-- footer -->
+    <script src="../static/js/map-script.js"></script>
+</body>
+</html>
